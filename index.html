@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap Icons CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="path/to/bootstrap-icons.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div class="container-fulid">
+        <header>
+            <a href="#about"><i class="bi bi-file-person-fill"></i>About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact"><i class="bi bi-person-lines-fill"></i>Contact</a>
+        </header>
+    </div>
+
+    <div class="about">
+        <h1>GOKILA K</h1>
+        <P>FRONTEND DEVELOPER | WEB DESIGNER</P>
+    </div>
+
+    <section id="about" class="about-me">
+        <h1>About Me</h1>
+        <p>A highly movitated and detail-oriented front-end developer with a strong foundation in HTML,CSS,JavaScript and responsive design. <br>
+            Seeking an entry-level poaition to apply my techinal skills and grow in a dynamic development enviroment. </p>
+    </section>
+
+    <section id="education" class="education">
+        <h1>EDUCATION DETAILS</h1><br>
+        <div class="card1">
+            <button id="showAlertButton">SCHOOL DETAILS</button>
+            <div id="alertModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+
+                    <p>
+                    <pre>
+                       THE LAKSHMI MILLS HIGHER SECINDARY SCHOOL,KOVILPATTI                       
+SSCL                                       2019-2020
+
+THE LAKSHMI MILLS HIGHER SECINDARY SCHOOL,KOVILPATTI
+HSC                                       2021-2022
+                            </pre>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card2">
+            <button id="showAlertButton1">COLLEGE DETAILS</button>
+            <div id="alertModal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal1">&times;</span>
+
+                    <p>
+                    <pre>           SRI S. RAMASAMY NAIDU MEMORIAL COLLEGE, SATTUR          
+  BSc.COMPUTER SCIENCE                 2022-2025 </pre>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="skill" id="skills">
+        <center>
+            <h1>SKILLS</h1>
+        </center>
+
+        <div class="pyramid-container">
+            <!-- Top Tier (1 Skill) -->
+            <div class="pyramid-row">
+              <div class="circle-skill">HTML</div>
+            </div>
+          
+            <!-- Middle Tier (2 Skills) -->
+            <div class="pyramid-row">
+              <div class="circle-skill">CSS</div>
+              <div class="circle-skill">JavaScript</div>
+            </div>
+          
+            <!-- Bottom Tier (3 Skills) -->
+            <div class="pyramid-row">
+              <div class="circle-skill">SQL</div>
+              <div class="circle-skill">Git</div>
+              <div class="circle-skill">Figma</div>
+            </div>
+          </div>
+          </section>
+
+         <section id="projects" class="projects-grid">
+            <h1>Projects</h1>
+            <center>
+            <div class="project-card">
+                <h1>PROJECT 1</h1>
+                <h4>Portfolio Website</h4>
+                <p><b>Technologies used:</b><br><pre>
+        HTML, CSS, Bootstrap, and JavaScript.</pre></p>
+                <p><b>Description:</b><br><pre>
+        This project showcases personal projects, skills, 
+        and experience in a clean and user-friendly design.
+        Features include smooth scrolling, interactive 
+        components,responsive layout, and dynamic elements 
+        for an engaging user experience.</pre></p>
+            </div>
+
+            <div class="project-card">
+               <h1>PROJECT 2</h1>
+                <h4>BMI Calculator</h4>
+                <p><b>Technologies used:</b><br><pre>
+        HTML, CSS, and JavaScript.</pre></p>
+                <p><b>Description:</b><br><pre>
+        This project allows users to input their height and 
+        weight to calculate their BMI and receive a health 
+        classification based on the result.The design is 
+        clean and responsive, providing real-time feedback 
+        and an interactive user experience.</pre></p>
+            </div>
+           </center> 
+        </section>
+        
+
+        <section id="contact" class="contact-form">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        
+
+        <footer>
+            <!--<p>&copy; 2025 Your Name. All rights reserved.</p>-->
+            <a href="#">Back to Top</a>
+        </footer>
+
+</body>
+<script>
+    /// Get the button and modal
+    const showAlertButton = document.getElementById('showAlertButton');
+    const alertModal = document.getElementById('alertModal');
+    const closeModal = document.getElementById('closeModal');
+
+    const showAlertButton1 = document.getElementById('showAlertButton1');
+    const alertModal1 = document.getElementById('alertModal1');
+    const closeModal1 = document.getElementById('closeModal1');
+
+    // Show the modal when the button is clicked
+    showAlertButton.onclick = function () {
+        alertModal.style.display = 'flex'; // Ensure modal shows when the button is clicked
+    };
+
+    showAlertButton1.onclick = function () {
+        alertModal1.style.display = 'flex'; // Ensure modal shows when the button is clicked
+    };
+
+    // Close the modal when the "x" is clicked
+    closeModal.onclick = function () {
+        alertModal.style.display = 'none'; // Hide the modal when the close button is clicked
+    };
+
+    closeModal1.onclick = function () {
+        alertModal1.style.display = 'none'; // Hide the modal when the close button is clicked
+    };
+    // Close the modal when the user clicks anywhere outside of the modal content
+    window.onclick = function (event) {
+        if (event.target === alertModal) {
+            alertModal.style.display = 'none'; // Hide the modal when clicked outside of modal content
+        }
+    };
+
+    window.onclick = function (event) {
+        if (event.target === alertModal1) {
+            alertModal1.style.display = 'none'; // Hide the modal when clicked outside of modal content
+        }
+    };
+</script>
+
+</html>
